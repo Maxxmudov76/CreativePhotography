@@ -1,0 +1,482 @@
+ /***** RESET *****/
+ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,del, dfn, em, font, img, ins, kbd, q, s, samp,
+ small, strike, sub, sup, tt, var, b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr {
+     margin: 0;
+     padding: 0;
+     border: 0;
+     outline: 0;
+     /* font-size: 100%;
+     vertical-align: baseline;
+      */
+ }
+ html, body {height:100%;}
+ body {line-height: 1;}
+ ol, ul {list-style: none;}
+ blockquote, q {quotes: none;}
+ blockquote:before, blockquote:after, q:before, q:after {content: '';content: none;}
+ table {border-collapse: collapse;border-spacing: 0;} 
+ textarea {overflow:auto;}
+ 
+ /***** RESET *****/
+         header{
+             width: 100%;
+             height: 75px;
+             background: #2ebfac;
+             position: fixed;
+         }
+         header .logo{
+             width: 250px;
+             height: 75px;   
+             line-height: 70px;
+             text-align: center;
+             float: left;
+         }
+         header .logo a{
+             font-family: Arial;
+             font-size: 20px;
+             font-weight: bold;
+             color: white;
+             text-decoration: none;
+         }
+         header .logo span{
+             font: 20px Arial;
+         }
+         .menu{
+             width: 600px;
+             height: 75px;
+             margin: 0 0 0 44%;
+             float: left;
+         }
+         .menu ul{
+             list-style: none;
+         }
+         .menu ul li{
+             float: left;
+             position: relative;
+         }
+         .menu ul li a{
+             display: block;
+             width: 150px;
+             height: 40px;
+             color: white;
+             text-align: center;
+             text-decoration: none;
+             line-height: 37px;
+             margin:17px 0 0 0 ;
+             border-radius: 5px;
+         }
+         .menu ul li a:hover{
+             background: lightblue;
+             transition: all 0.5s;
+         }
+         .menu ul li ul{
+             display: none;
+             position: absolute;
+             background: #2ebfac;
+             border-radius: 5px;
+             
+         }
+         .menu ul li:hover ul {
+             display: block;
+             
+         }
+         #home{
+             width: 98px;
+             border: 1px solid white;
+         }
+         #signup{
+             width: 98px;
+             border-radius: 20px;
+             border: 1px solid lightblue;
+         }
+         #lands:hover i{
+            transform: rotateX(180deg);
+            transition: 0.4s;
+        }
+        #categories:hover i{
+            transform: rotateX(180deg);
+            transition: 0.4s;
+        }
+         .container{
+             width: 100%;
+             height: 3100px;
+             margin: 0 auto ;
+             background:linear-gradient(45deg, #EF9FF9, #8EA5DE, #FFC26B, #A9F5D0);
+             background-size: 500% 500%;
+             animation: animeBG 2s linear infinite;
+             animation-direction: alternate; 
+         }
+         @keyframes animeBG{
+             0%{
+                 background-position: 0;
+             }
+             100%{
+                background-position: 100%;
+             }
+         }
+         main{
+             width: 1400px;
+             height: 2100px;
+             margin: 0 auto;
+             background-color: none;
+         }
+         .first{
+             width: 900px;
+             height: 2100px;
+             float: left;
+             
+         }
+         .second{
+                 width: 500px;
+                 height: 2100px;
+                 float: left;
+         }
+         .space{
+             width: 100%;
+             height: 150px;
+             background-color: none;
+            
+             float: left;
+         }
+         
+         .slidercontent{
+             width: 750px;
+             height: 300px;
+             float: left;
+             background: url(photos/1.jpg);
+             font: 50px Tahoma;
+             letter-spacing: 2px;
+             color: white;
+             text-align: center;
+             padding: 200px 0 0 150px ;
+             animation: slider 40s infinite;
+         }
+         .slidercontent div{
+             width: 650px;
+             height: 70px;
+             font: bold 40px "Lucida Console", "Courier New", monospace;
+             line-height: 70px;
+             text-align: center;
+             background:#2ebfac50;
+             border-radius: 15px;
+             position: relative;
+         }
+         @keyframes slider{
+             8%{
+                 background: url(photos/2.jpg);
+             }
+             16%{
+                 background: url(photos/3.jpg);
+             }
+             24%{
+                 background: url(photos/12.jpg);
+             }
+             32%{
+                 background: url(photos/5.jpg);
+             }
+             40%{
+                 background: url(photos/6.jpg);
+             }
+             48%{
+                 background: url(photos/13.jpg);
+             }
+             56%{
+                 background: url(photos/8.jpg);
+             }
+             64%{
+                 background: url(photos/9.jpg);
+             }
+             72%{
+                 background: url(photos/10.jpg);
+             }
+             80%{
+                 background: url(photos/11.jpg);
+             }
+             88%{
+                 background: url(photos/14.jpg);
+             }
+             100%{
+                 background: url(photos/1.jpg);
+             }
+         }
+         .article1{
+             width: 378px;
+             height: 330px;
+             border: 1px solid rgb(231, 231, 231);
+             float: left;
+            background-color: white;
+           padding: 70px 60px 0 60px;
+           text-align: left;
+           color:#888;
+           line-height: 20px;
+         }
+         .article1 h1{
+            font-weight: lighter;
+             font-family: "Lucida Console", "Courier New", monospace;
+             color: #2ebfac;
+           margin: 0 0 40px 0;
+         }
+         .article1 a div:hover{
+            background-color: #2ebfac;
+            opacity: 0.5;
+ 
+         }
+         .article2{
+             width: 780px;
+             height: 100px;
+             border: 1px solid rgb(231, 231, 231);
+             float: left;
+            background-color: white;
+            padding: 40px 60px 60px 60px;
+            color:#888;
+           line-height: 20px;
+         }
+         .article2 h1{
+            font-weight: lighter;
+             font-family: "Lucida Console", "Courier New", monospace;
+             color: #2ebfac;
+             margin: 0 0 30px 0;
+         }
+         .article3{
+             width: 498px;
+             height: 800px;
+             border: 1px solid rgb(231, 231, 231);
+             float: left;
+            background-color: white;
+            color:#888;
+           
+         }
+         .article3 h1,h2{
+            font-weight: lighter;
+             font-family: "Lucida Console", "Courier New", monospace;
+             color: #2ebfac;
+             margin: 40px 0 50px 46px;
+         }
+         .article3 div img:hover{
+             transform: scale(1.2);
+         }
+         .article3 input{
+             width: 80px;
+             height: 22px;
+             border-radius: 11px;
+             background-color: #2ebfac;
+             border: 1px solid #2ebfac;
+             cursor: pointer;
+         }
+         .article3 input:hover{
+             background-color: lightblue;
+         }
+         #more{
+             margin: 30px  0 0 280px;
+             outline: none;
+             color: white;
+         }
+         #less{
+            outline: none;
+            color: white;
+        }
+        #more:hover, #less:hover{
+            color: #333;
+        }
+         .article4{
+             width: 418px;
+             height: 140px;
+             border: 1px solid rgb(231, 231, 231);
+             float: left;
+             background-color: white;
+             padding: 60px  0 0 30px;
+         }
+         .article4 h2{
+            font-weight: lighter;
+             font-family: "Lucida Console", "Courier New", monospace;
+             color: #2ebfac;
+            margin: 0 0 0 70px;
+         }
+         .article5{
+             width: 448px;
+             height: 450px;
+             border: 1px solid rgb(231, 231, 231);
+             float: left;
+             background-color: white;
+            padding: 50px 0 0 0;
+         }
+         .article5 div{
+             width: 270px;
+             height: 150px;
+             margin: 0 auto;
+             overflow: hidden;
+         }
+         .article5 div img{
+             transition: all 0.5s;
+         }
+         .article5 div img:hover{
+             transform: scale(1.2);
+         }
+         .article5 h2{
+            font-weight: lighter;
+             font-family: "Lucida Console", "Courier New", monospace;
+             color: #2ebfac;
+            margin: 10px 0 0 86px;
+         }
+         .article5 p{
+             display: block;
+             width: 270px;
+             height: 150px;
+             margin: 15px auto;
+             color:#888;
+             line-height: 23px;
+             font-family: inherit;
+         }
+         .article5 button{
+             width: 150px;
+             height: 30px;
+             background-color: #2ebfac;
+             border: 1px solid #2ebfac;
+             cursor: pointer;
+             margin: 0 0 0 90px;
+             color: white;
+         }
+         .article5 button:hover{
+             background-color: lightblue;
+             color: #333;
+         }
+         .article6{
+             width: 498px;
+             height: 904px;
+             border: 1px solid rgb(231, 231, 231);
+             float: left;
+             background-color: white;
+         }
+         .article6container{
+             width: 400px;
+             height: 700px;
+             margin: 100px auto;
+         }
+         .article6container h1{
+             font-weight: lighter;
+             font-family: "Lucida Console", "Courier New", monospace;
+             color: #2ebfac;
+             text-align:center;
+             }
+         .article6content
+         {
+             width: 300px;
+             height: 85px;
+             border-bottom: 1px solid rgb(231, 231, 231);
+             margin: 0 auto;
+             padding: 15px;
+ 
+         }
+         .article6content p{
+             color: #555;
+             text-align: inherit;
+         }
+         .article6content span{
+             display: block;
+             width: 150px;
+             height: 50px;
+             color: #888;
+             margin:  0 0 -20px 0;
+             line-height: 50px;
+         }
+         footer{
+             width: 100%;
+             height: 600px;
+             background: white;
+             margin: 400px 0 0 0;
+         }
+         .aboutus{
+             width: 64%;
+             height: 498px;
+             border: 1px solid rgb(231, 231, 231);
+             background: white;
+             float: left;
+         }
+         .left{
+            width: 50%;
+            height: 400px;
+            margin: 0 0 0 100px;
+            float: left;
+         }
+         .left h2{
+            font-weight: lighter;
+            font-family: "Lucida Console", "Courier New", monospace;
+            color: #2ebfac;
+            
+         }
+         .left p{
+             display: inline-block;
+             width: 350px;
+             height: 300px;
+             line-height: 23px;
+             color: #888;
+         }
+         .aboutus button{
+            width: 150px;
+            height: 30px;
+            background-color: #2ebfac;
+            border: 1px solid #2ebfac;
+            cursor: pointer;
+            margin: 0 0 0 100px;
+            color: white;
+        }
+        .aboutus button:hover{
+            background-color: lightblue;
+            color: #333;
+        }
+        .right{
+            width: 37%;
+            height: 400px;
+            float: left;
+            margin: 50px 0 0 0;
+           
+        }
+        .photographer{
+            width: 100%;
+            height: 80px;
+            margin: 50px 0 0 0;
+            
+            
+        }
+         .contactus{
+             width: 30.471%;
+             height: 498px;
+             border: 1px solid rgb(231, 231, 231);
+             background: white;
+             float: left;
+             padding: 0 0 0 80px;
+         }
+         .contactus h2{
+             margin-left: 0;
+            margin-bottom: 35px;
+          font-family:  "Lucida Console", "Courier New", monospace;
+         }
+         .contactus a{
+             text-decoration: none;
+             color: #666;
+             transition: 0.4s;
+         }
+         .contactus  a:hover{
+            color: #2ebfac;
+         }
+         .rights{
+             width: 100%;
+             height: 98px;
+             border-top-right-left: 1px solid rgb(231, 231, 231);
+             background: white;
+             float: left;
+             color:#888;
+             text-align: center;
+         }
+         .rights span a{
+             color: #2ebfac;
+             text-decoration: none;
+             transition: 0.4s;
+         }
+         .rights span a:hover{
+             color: black;
+             font-size: 17px;
+         }
+         
+         
+         

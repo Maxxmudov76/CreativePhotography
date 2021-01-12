@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <style>
+        /***** RESET *****/
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        font,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+            /*font-size: 100%;
+     vertical-align: baseline;*/
+
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            line-height: 1;
+        }
+
+        ol,
+        ul {
+            list-style: none;
+        }
+
+        blockquote,
+        q {
+            quotes: none;
+        }
+
+        blockquote:before,
+        blockquote:after,
+        q:before,
+        q:after {
+            content: '';
+            content: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        textarea {
+            overflow: auto;
+        }
+
+        /***** RESET *****/
+
+        header {
+            width: 100%;
+            height: 75px;
+            background: #2ebfac;
+            position: fixed;
+        }
+
+        header .logo {
+            width: 250px;
+            height: 75px;
+            line-height: 70px;
+            text-align: center;
+            float: left;
+        }
+
+        header .logo a {
+            font-family: Arial;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        header .logo span {
+            font: 20px Arial;
+        }
+
+        .menu {
+            width: 600px;
+            height: 75px;
+            margin: 0px 0 0 650px;
+            float: left;
+        }
+
+        .menu ul {
+            list-style: none;
+        }
+
+        .menu ul li {
+            float: left;
+            position: relative;
+        }
+
+        .menu ul li a {
+            display: block;
+            width: 150px;
+            height: 40px;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            line-height: 37px;
+            margin: 17px 0 0 0;
+            border-radius: 5px;
+        }
+
+        .menu ul li a:hover {
+            background: lightblue;
+            transition: all 0.5s;
+        }
+
+        .menu ul li ul {
+            display: none;
+            position: absolute;
+            background: #2ebfac;
+            border-radius: 5px;
+        }
+
+        .menu ul li:hover ul {
+            display: block;
+
+        }
+
+        #home {
+            width: 98px;
+
+        }
+
+        #login {
+            width: 98px;
+            border-radius: 20px;
+            border: 1px solid white;
+        }
+
+
+
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            background: linear-gradient(45deg, #EF9FF9, #8EA5DE, #FFC26B, #A9F5D0);
+            background-size: 500% 500%;
+            animation: animeBG 2s linear infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes animeBG {
+            0% {
+                background-position: 0;
+            }
+
+            100% {
+                background-position: 100%;
+            }
+        }
+
+        .space {
+            width: 100%;
+            height: 100px;
+        }
+
+        .FormContainer {
+            width: 50%;
+            height: 70%;
+            background-color: white;
+            margin: 15px auto;
+            border-radius: 5px;
+            border: 2px solid #2ebfac;
+        }
+
+        .Registration {
+            width: 200px;
+            height: 50px;
+            background-color: #2ebfac;
+            margin-top: 20px;
+            text-align: center;
+            line-height: 50px;
+            font-size: 25px;
+            font-weight: bold;
+            font-family: monospace;
+            color: white;
+        }
+
+        table {
+            margin: 20px auto;
+            font: bold 14px monospace;
+            letter-spacing: 1px;
+            color: #333;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+        }
+
+        #Name,
+        #Surname,
+        #Username,
+        #Password,
+        #Writtencode,
+        #email {
+            width: 70%;
+            height: 15px;
+            border: 1px solid #2ebfac;
+            font: bold 14px monospace;
+        }
+
+        #button {
+            width: 60px;
+            height: 20px;
+            background-color: #2ebfac;
+            border: 1px solid #2ebfac;
+            cursor: pointer;
+            margin-left: 50px;
+            margin-top: 25px;
+        }
+
+        #button:hover {
+            background-color: lightblue;
+        }
+
+        #Givencode {
+            width: 160px;
+            height: 48px;
+            font: bold 30px tahoma;
+            background-color: #2ebfac;
+            color: black;
+            text-align: center;
+            border: none;
+            text-shadow: 0 1 1px #000;
+            padding: 8px 0 0 0;
+        }
+
+        #namemes,
+        #surnamemes,
+        #usernamemes,
+        #passwordmes,
+        #emailmes,
+        #writtencodemes {
+            color: #f31212;
+            font: bold 14px Garamond;
+        }
+
+        #hidden {
+            display: none;
+        }
+    </style>
+    <script>
+        function makecode() {
+            var code;
+            code = "";
+            for (var i = 0; i <= 6; i++) {
+                if (Math.round(Math.random()) == 1) { code = code + String.fromCharCode(48 + 9 * Math.random()); }
+                else { code = code + String.fromCharCode(65 + 25 * Math.random()); }
+
+            }
+            document.getElementById("Givencode").innerHTML = code;
+        }
+
+        function empty() {
+            if (document.getElementById("Name").value == "") {
+                document.getElementById("namemes").innerHTML = "Add your Name";
+
+            }
+            else {
+                document.getElementById("namemes").innerHTML = "";
+            }
+            if (document.getElementById("Surname").value == "") {
+                document.getElementById("surnamemes").innerHTML = "Add your Surname";
+
+            }
+            else {
+                document.getElementById("surnamemes").innerHTML = "";
+            }
+            if (document.getElementById("Username").value == "") {
+                document.getElementById("usernamemes").innerHTML = "Add your Username";
+
+            }
+            else {
+                document.getElementById("usernamemes").innerHTML = "";
+            }
+            if (document.getElementById("Password").value == "") {
+                document.getElementById("passwordmes").innerHTML = "Add your Password";
+
+            }
+            else {
+                document.getElementById("passwordmes").innerHTML = "";
+
+            }
+            if (document.getElementById("email").value == "") {
+                document.getElementById("emailmes").innerHTML = "Add your Elektron mail";
+
+            }
+            else {
+                document.getElementById("emailmes").innerHTML = "";
+
+            }
+            if (document.getElementById("Writtencode").value == "") {
+                document.getElementById("writtencodemes").innerHTML = "Write the given code";
+
+            }
+            else {
+                document.getElementById("writtencodemes").innerHTML = "";
+
+            }
+        }
+        function show() {
+            document.getElementById("hidden").style.display = "inline-block";
+        }
+
+    </script>
+</head>
+
+<body onload="makecode()">
+    <header>
+        <div class="logo"><a href="#">
+                Creative <span>Photography</span>
+            </a></div>
+        <div class="menu">
+            <ul>
+                <li><a href="#" id="home">Home</a></li>
+                <li><a href="#"><i class="fas fa-caret-down"></i>&nbsp; Landscape</a>
+                    <ul>
+                        <li><a href="#">Beach</a></li>
+                        <li><a href="#">Mountain</a></li>
+                        <li><a href="#">Forest</a></li>
+                        <li><a href="#">City</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="fas fa-caret-down"></i>&nbsp;Categories</a>
+                    <ul>
+                        <li><a href="#">Love Story</a></li>
+                        <li><a href="#">Graduation</a></li>
+                        <li><a href="#">Baby Story</a></li>
+                        <li><a href="#">Other</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" id="login">Sign up</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="space"></div>
+    <div class="FormContainer">
+        <div class="Registration">Registration Form</div>
+        <form action="" method="POST">
+            <table border="0">
+                <tr height="30px">
+                    <td width="180">Name:</td>
+                    <td width="270"><input type="text" name="" id="Name" placeholder="Ad your name"></td>
+                    <td width="180"><span id="namemes"></span></td>
+                </tr>
+                <tr height="30px">
+                    <td width="180">Surname:</td>
+                    <td width="270"><input type="text" name="" id="Surname" placeholder="Add your surname"></td>
+                    <td width="180"><span id="surnamemes"></span></td>
+                </tr>
+                <tr height="30px">
+                    <td width="180">User Name:</td>
+                    <td width="270"><input type="text" name="" id="Username" placeholder="Add your username"></td>
+                    <td width="180"><span id="usernamemes"></span></td>
+                </tr>
+                <tr height="30px">
+                    <td width="180">Password:</td>
+                    <td width="270"><input type="password" name="" id="Password" placeholder="*****"></td>
+                    <td width="180"><span id="passwordmes"></span></td>
+                </tr>
+                <tr height="30px">
+                    <td width="180">E-mail:</td>
+                    <td width="270"><input type="email" name="" id="email" placeholder="Example@gmail.com"></td>
+                    <td width="180"><span id="emailmes"></span></td>
+                </tr>
+                <tr height="30px">
+                    <td width="180">Birthday:</td>
+                    <td width="270"><input type="date" name="" id="Bdate"></td>
+                    <td width="180"></td>
+                </tr>
+                <tr height="30px">
+                    <td width="180">Country:</td>
+                    <td width="270">
+                        <select name="" id="Bplace">
+                            <option value="Az">Azerbaijan</option>
+                            <option value="Tr">Turkey</option>
+                            <option value="Rus">Russia</option>
+                            <option value="USA">U.S.A</option>
+                            <option value="Geo">Georgia</option>
+                            <option value="Ger">Germany</option>
+                        </select>
+                    </td>
+                    <td width="180"></td>
+                </tr>
+                <tr height="30px">
+                    <td width="180">Gender:</td>
+                    <td width="270">
+                        <input type="radio" name="Gender" id="Male" value="Male" checked> Male
+                        <input type="radio" name="Gender" id="Female" value="Female"> Female
+                    </td>
+                    <td width="180"></td>
+                </tr>
+                <tr height="30px">
+                    <td width="180">Hobbies:</td>
+                    <td width="270">
+                        <input type="checkbox" name="" id="Sport" value="Sport">Sport
+                        <input type="checkbox" name="" id="Rbook" value="Reading Book">Reading Book <br>
+                        <input type="checkbox" name="" id="Lmusic" value="Listening Music">Listening Music
+                        <input type="checkbox" name="" id="Other" value="Other" onclick="show()">Other
+                        <input type="text" name="" id="hidden">
+                    </td>
+                    <td width="180"></td>
+                </tr>
+                <tr height="60px">
+                    <td width="180">
+                        <div id="Givencode"></div>
+                    </td>
+                    <td width="270"> <input type="text" name="" id="Writtencode" placeholder="Write given code"></td>
+                    <td width="180"><span id="writtencodemes"></span></td>
+                </tr>
+                <tr height="30px">
+                    <td width="180"></td>
+                    <td width="270"><input type="Button" name="Button" id="button" value="Create" onclick="empty()">
+                    </td>
+                    <td width="180"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>
